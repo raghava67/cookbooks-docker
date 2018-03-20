@@ -1,2 +1,1 @@
-yum update if platform_family?('linux')
-include_recipe 'docker::modify'
+include_recipe "docker-engine::install_#{node['docker-engine']['install']['method']}"
